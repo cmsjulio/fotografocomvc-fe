@@ -1,0 +1,43 @@
+<div id="app">
+  <div>
+    <div class="header-height pt-4 pb-4 bg-purple text-white flex flex-wrap align-items-center justify-content-center">
+      <div class="text-white w-8">
+        <div class=" flex justify-content-between flex-wrap max-w-full">
+          <div class="flex align-items-center w-6">
+            <a href="#">
+              <h4> fotografo.com.vc</h4>
+            </a>
+            <!-- <h4> fotografo.com.vc</h4> -->
+          </div>
+          <div class="flex align-items-center justify-content-end w-6">
+            <div class=>
+              <div *ngIf="!isLoggedIn" class="flex justify-content-end flex-wrap">
+                <div class="flex align-items-center justify-content-end w-6rem mr-2 ml-2">
+                  <a routerLink="register">
+                    <h6> CADASTRO </h6>
+                  </a>
+                </div>
+                <div class="flex align-items-center justify-content-end w-6rem mr ml-2">
+                  <a routerLink="login">
+                    <h6> LOGIN </h6>
+                  </a>
+                </div>
+              </div>
+              <div *ngIf="isLoggedIn" class="flex justify-content-end flex-wrap">
+                <div class="flex align-items-center justify-content-end w-6rem mr-2 ml-2">
+                  <a routerLink="user">
+                    <h6> MEU PERFIL </h6>
+                  </a>
+                </div>
+                <div class="flex align-items-center justify-content-end w-6rem mr ml-2">
+                  <a (click)="logout()">
+                    <h6> LOGOUT </h6>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

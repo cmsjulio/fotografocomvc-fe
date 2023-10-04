@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TokenStorageService } from '../_services/token-storage.service';
+import { TokenStorageService } from '../auth/_services/token-storage.service';
 
 @Component({
   selector: 'app-profile',

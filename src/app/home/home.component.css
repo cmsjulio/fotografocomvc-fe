@@ -1,0 +1,35 @@
+h3, h4 {
+  font-family: Outfit;
+}
+
+.white-border{
+  border: white;
+  border-bottom: 1.5px white;
+  border-style: solid none solid none
+}
+
+.board-1-home {
+  height: 16rem;
+}
+
+.board-2-home{
+  height: 33rem;
+}
+
+.huge-text{
+  font-size: 70px;
+  font-weight: bolder;
+  text-align: left;
+}
+
+
+.not-so-huge-text{
+  font-size: 1.3rem;
+  font-weight: bolder;
+  text-align: left;
+}
+
+.weighted{
+
+    font-family: Outfit;
+  }

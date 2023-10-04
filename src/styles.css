@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Outfit';
+  src: url('./assets/Outfit-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'OutfitW';
+  src: url('./assets/Outfit-VariableFont_wght.ttf');
+}
+
+* {
+  font-family: Outfit;
+}
+
+.bg-purple{
+  background-color:#2C0A34;
+}
+
+.bg-blue{
+  background-color: #4E096F;
+}

@@ -1,0 +1,22 @@
+h4, h6{
+  color: white;
+}
+
+
+h4:hover, a:hover, h6:hover {
+  color: rgb(179, 178, 178);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: rgb(179, 178, 178);
+  margin: 0;
+}
+
+.footer-height{
+  height: 6rem;
+}

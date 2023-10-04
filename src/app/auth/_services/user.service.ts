@@ -1,4 +1,4 @@
-import { environment } from './../../environments/environment';
+import { environment } from './../../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -12,11 +12,11 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   getPublicContent(): Observable<any> {
-    return this.http.get(API_URL + 'photographer', { responseType: 'text' });
+    return new Observable<void>();
   }
 
   getUserBoard(): Observable<any> {
-    return new Observable<void>();
+    return this.http.get(API_URL + 'photographer', { responseType: 'text' });
   }
 
   getModeratorBoard(): Observable<any> {
