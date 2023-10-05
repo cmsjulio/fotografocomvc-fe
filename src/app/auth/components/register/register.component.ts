@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
             console.log(data);
             this.isSuccessful = true;
             this.isSignUpFailed = false;
-            // this.reloadPage();
+            this.reloadPage();
           },
           error: (err) => {
             this.errorMessage = err.error.message;
@@ -50,7 +50,7 @@ export class RegisterComponent implements OnInit {
           console.log(data);
           this.isSuccessful = true;
           this.isSignUpFailed = false;
-          // this.reloadPage();
+          this.reloadPage();
         },
         error: (err) => {
           this.errorMessage = err.error.message;
