@@ -4,32 +4,37 @@ h3, h4 {
 
 .white-border{
   border: white;
-  border-bottom: 1.5px white;
+  border-width: 0.2vw;
   border-style: solid none solid none
 }
 
 .board-1-home {
-  height: 16rem;
+  height: 14vw;
 }
 
 .board-2-home{
-  height: 33rem;
+  height: 27vw;
 }
 
 .huge-text{
-  font-size: 70px;
+  font-size: 4vw;
   font-weight: bolder;
   text-align: left;
+  line-height: 1.1;
 }
 
 
 .not-so-huge-text{
-  font-size: 1.3rem;
+  font-size: 1vw;
   font-weight: bolder;
   text-align: left;
+  letter-spacing: .1em;
 }
 
-.weighted{
-
+.cta{
+  font-size: 1.8vw;
+  font-weight: bolder;
+  text-align: left;
+  letter-spacing: .1em;
     font-family: Outfit;
   }
