@@ -17,6 +17,7 @@ import {ButtonModule} from 'primeng/button';
 import { authInterceptorProviders } from './auth/_helpers/auth.interceptor';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import {InputTextModule} from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    InputTextModule,
     ButtonModule
   ],
   providers: [authInterceptorProviders],
