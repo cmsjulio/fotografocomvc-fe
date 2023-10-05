@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
   onSubmit(): void {
     const { username, email, password } = this.form;
 
-    if (this.accountType === 'te') {
+    if (this.accountType === 'PHOTOGRAPHER') {
       // order matters in this call, as it's not yet typed
       this.authService
         .registerPhotographer(email, username, password)
