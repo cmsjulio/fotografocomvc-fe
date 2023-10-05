@@ -1,9 +1,9 @@
 /* The Modal (background) */
 .modal {
-  display: hidden; /* Hidden by default */
+  display: block; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 10vw; /* Location of the box */
+  padding-top: 5vw; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -22,6 +22,8 @@
   width: 80%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   animation-name: animatetop;
+  max-width: 1000px;
+  min-width: 50px;
   animation-duration: 0.7s
 }
 
@@ -46,18 +48,17 @@
 
 .close:hover,
 .close:focus {
-  color: #000;
   text-decoration: none;
   cursor: pointer;
 }
 
 .modal-header {
-  padding: 1vw 2vw;
+  padding: 1em 2em;
   color: white;
 }
 
 .modal-body {
-  padding: 1vw 2vw;
+  padding: 1em 2em;
   color: white}
 
 .modal-footer {

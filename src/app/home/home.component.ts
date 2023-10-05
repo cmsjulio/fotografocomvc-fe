@@ -4,22 +4,22 @@ import { UserService } from '../auth/_services/user.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
   content?: string;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService) {}
 
   ngOnInit(): void {
     this.userService.getPublicContent().subscribe({
-      next: data => {
+      next: (data) => {
         this.content = data;
-        console.log(data)
+        console.log(data);
       },
-      error: err => {
+      error: (err) => {
         this.content = JSON.parse(err.error).message;
-      }
+      },
     });
   }
 }
