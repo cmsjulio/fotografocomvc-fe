@@ -1,6 +1,13 @@
-h4, h6{
+h4 {
   color: white;
+  font-size: 1.5vw;
 }
+
+h6 {
+  color: white;
+  font-size: 1vw;
+}
+
 
 h4:hover, a:hover, h6:hover {
   color: rgb(179, 178, 178);
@@ -12,5 +19,9 @@ a {
 }
 
 .header-height{
-  height: 6rem;
+  /* height: 6rem; */
+  height: 5vw;
+  border: white;
+  border-width: 0.2vw;
+  border-style: none none solid none
 }
