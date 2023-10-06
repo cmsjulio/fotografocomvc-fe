@@ -1,0 +1,37 @@
+<div>
+  <div style="display: inline;">
+    <div style="display: flex; justify-content: space-between;">
+      <div>Estado:</div>
+      <div class="dropdown">
+        <button class="dropbtn" [(ngModel)]="selectedState" ngDefaultControl>
+          {{selectedState}}
+        </button>
+        <div class="dropdown-content">
+          <tr (click)="itemStateClick(location)" class="dropdown-item" *ngFor="let location of locationStateList">
+            <td>{{location}}</td>
+          </tr>
+        </div>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: space-between;">
+      <div>Cidade:</div>
+      <div class="dropdown" [(ngModel)]="locationCityList" ngDefaultControl>
+        <button class="dropbtn" [(ngModel)]="selectedCity" ngDefaultControl>
+          {{selectedCity}}
+        </button>
+        <div class="dropdown-content">
+          <tr (click)="itemCityClick(location)" class="dropdown-item" *ngFor="let location of locationCityList">
+            <td>{{location.locationCity}}</td>
+          </tr>
+        </div>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: center;">
+      <div (click)="submitLocationRequest()" class="buscar-button" style="display: flex; justify-content: center;"
+        [ngClass]="isLocationSelected ? 'buscar-button-on' : 'buscar-button-off'">
+        Buscar
+      </div>
+    </div>
+  </div>
+
+</div>

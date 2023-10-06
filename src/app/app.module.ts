@@ -18,6 +18,7 @@ import { authInterceptorProviders } from './auth/_helpers/auth.interceptor';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import {InputTextModule} from 'primeng/inputtext';
+import { SelecionarCidadeComponent } from './home/components/selecionar-cidade/selecionar-cidade.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {InputTextModule} from 'primeng/inputtext';
     BoardUserComponent,
     HeaderComponent,
     FooterComponent,
+    SelecionarCidadeComponent,
 
   ],
   imports: [
