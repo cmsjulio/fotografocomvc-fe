@@ -1,17 +1,21 @@
 .card-holder{
-  border: white;
   border-radius: 10px;
-  border-width: 1px;
-  border-style: solid;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 300px;
+  height: 500px;
+  background-color: black;
+  transition: box-shadow .3s;
+}
+
+.card-holder:hover{
+  cursor: pointer;
+  box-shadow: 0 0 11px rgba(255, 255, 255, 0.7);
 }
 
 .profile-pic{
-  background-color: red;
+  background-color: gray;
   height: 50%;
   width: 100%;
   border-radius: 10px;
@@ -22,7 +26,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  background-color: blue;
   height: 50%;
   width: 100%;
   border-radius: 10px;
@@ -39,15 +42,7 @@
 }
 
 .profile-divider{
-  color: wheat;
-}
-
-.profile-bio{
-  background-color: gray;
-  width: 85%;
-  font-size: 12px;
-  max-height: 50px;
-  overflow: hidden;
+  width: 100%;
 }
 
 hr {
@@ -55,6 +50,14 @@ hr {
   clear:both;
   display:block;
   width: 85%;
-  background-color:#FFFF00;
+  background-color: white;
   height: 1px;
+}
+
+.profile-bio{
+  width: 85%;
+  font-size: 12px;
+  overflow: hidden;
+  background-color: wheat;
+  margin-bottom: 2em;
 }
