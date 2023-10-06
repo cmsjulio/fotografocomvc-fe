@@ -20,3 +20,8 @@
 .bg-blue{
   background-color: #4E096F;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+}

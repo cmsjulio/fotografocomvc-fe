@@ -1,3 +1,4 @@
+import { PhotographerListComponent } from './photographer/photographer-list.component';
 import { RegisterComponent } from './auth/components/register/register.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,12 +14,13 @@ import { ProfileComponent } from './profile/profile.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BoardUserComponent } from './board-user/board-user.component';
-import {ButtonModule} from 'primeng/button';
+import { ButtonModule } from 'primeng/button';
 import { authInterceptorProviders } from './auth/_helpers/auth.interceptor';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import {InputTextModule} from 'primeng/inputtext';
+import { InputTextModule } from 'primeng/inputtext';
 import { SelecionarCidadeComponent } from './home/components/selecionar-cidade/selecionar-cidade.component';
+import { PhotographerCardComponent } from './photographer/components/photographer-card/photographer-card.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { SelecionarCidadeComponent } from './home/components/selecionar-cidade/s
     HeaderComponent,
     FooterComponent,
     SelecionarCidadeComponent,
-
+    PhotographerListComponent,
+    PhotographerCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,9 +44,9 @@ import { SelecionarCidadeComponent } from './home/components/selecionar-cidade/s
     FormsModule,
     HttpClientModule,
     InputTextModule,
-    ButtonModule
+    ButtonModule,
   ],
   providers: [authInterceptorProviders],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
