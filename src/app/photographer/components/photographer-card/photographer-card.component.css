@@ -58,6 +58,6 @@ hr {
   width: 85%;
   font-size: 12px;
   overflow: hidden;
-  background-color: wheat;
+  text-align: justify;
   margin-bottom: 2em;
 }
