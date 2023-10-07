@@ -21,6 +21,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { InputTextModule } from 'primeng/inputtext';
 import { SelecionarCidadeComponent } from './home/components/selecionar-cidade/selecionar-cidade.component';
 import { PhotographerCardComponent } from './photographer/components/photographer-card/photographer-card.component';
+import { FilterModalComponent } from './photographer/components/filter-modal/filter-modal.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { PhotographerCardComponent } from './photographer/components/photographe
     SelecionarCidadeComponent,
     PhotographerListComponent,
     PhotographerCardComponent,
+    FilterModalComponent,
   ],
   imports: [
     BrowserModule,

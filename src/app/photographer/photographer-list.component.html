@@ -2,21 +2,27 @@
   <div class="w-12 flex justify-content-center board-1-photographer">
     <div class="w-8">
       Exibindo fotógrafos em ...
-  </div>
-</div>
-<div class="w-12 flex justify-content-center  board-2-photographer">
-  <div class="w-12 sm:w-8 pt-5 pb-5 flex flex-column align-items-center">
-    <div class="filter-button">Filtrar</div>
-    <div class="filtrar-wrapper">
-      <app-photographer-card class="w-12 lg:w-4 p-2"></app-photographer-card>
-      <app-photographer-card class="w-12 lg:w-4 p-2"></app-photographer-card>
-      <app-photographer-card class="w-12 lg:w-4 p-2"></app-photographer-card>
-      <app-photographer-card class="w-12 lg:w-4 p-2"></app-photographer-card>
-      <app-photographer-card class="w-12 lg:w-4 p-2"></app-photographer-card>
-      <app-photographer-card class="w-12 lg:w-4 p-2"></app-photographer-card>
     </div>
-</div>
-</div>
+  </div>
+  <div class="w-12 flex justify-content-center board-2-photographer">
+    <div class="w-10 md:w-8 pt-5 pb-5 m-3 flex flex-column align-items-center">
+
+
+      <app-board-user *ngIf="showProfiles" class="inline-block" [header]="'Filtrar'" style="z-index: 1;">
+        <div activator>
+          <div class="filter-button">
+            Filtrar
+          </div>
+        </div>
+        <app-filter-modal></app-filter-modal>
+      </app-board-user>
+
+      <div class="filtrar-wrapper w-12">
+        <app-photographer-card *ngFor="let photographer of  photographerList" [photographer]="photographer"
+          class="w-12 md:w-6 lg:w-4 p-2"></app-photographer-card>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!--  BASE DA TELA PRA REAPROVEITAR NA REFATORAÇÃO DE HOME E HEADER/FOOTER

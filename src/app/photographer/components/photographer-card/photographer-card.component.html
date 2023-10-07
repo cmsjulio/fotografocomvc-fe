@@ -1,23 +1,22 @@
 <div class="card-holder">
 
   <div class="profile-pic">
-profilePicture
+    <figure>
+      <img [src]='thumb' alt="..." style="width:100%; max-height: 250px; color: black">
+    </figure>
   </div>
-
   <div class="profile-info">
     <div class="profile-title">
-      Name
+      {{photographer.name}}
     </div>
     <div class="profile-small-text">
-      ABOUT ME
+      {{photographer.shortInfo}}
     </div>
     <div class="profile-divider">
-    <hr>
+      <hr>
     </div>
     <div class="profile-bio">
-      le bio Profile bio Profile bio Profile bio Profile bio Profile bioProfile bio Profile bio Profile bio Profile bioProfile bio Profile bio Profile bio Profile bio
-      le bio Profile bio Profile bio Profile bio Profile bio Profile bioProfile bio Profile bio Profile bio Profile bioProfile bio Profile bio Profile bio Profile bio
+      {{photographer.bio}}
     </div>
   </div>
 </div>
-

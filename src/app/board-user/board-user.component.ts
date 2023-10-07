@@ -7,7 +7,7 @@ import { UserService } from '../auth/_services/user.service';
   styleUrls: ['./board-user.component.css'],
 })
 export class BoardUserComponent {
-  @Input() header?: string; // decorate the property with @Input()
+  @Input() header?: string;
   content?: string;
   public showModal: boolean = false;
 

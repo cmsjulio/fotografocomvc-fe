@@ -8,26 +8,26 @@
           </a>
           <!-- <h4> fotografo.com.vc</h4> -->
         </div>
-        <div class="flex align-items-center justify-content-end w-6"  style="z-index: 10;">
+        <div class="flex align-items-center justify-content-end w-6" style="z-index: 10;">
           <div class=>
             <div *ngIf="!isLoggedIn" class="flex justify-content-end flex-wrap">
               <div class="flex align-items-center justify-content-end  mr-2 ml-2">
                 <app-board-user [header]="'Cadastre-se'">
                   <div activator>
-                      <h6> CADASTRO </h6>
+                    <h6> CADASTRO </h6>
                   </div>
-                <app-register></app-register>
+                  <app-register></app-register>
                 </app-board-user>
                 <!-- <a routerLink="register">
                   <h6> CADASTRO </h6>
                 </a> -->
               </div>
-              <div class="flex align-items-center justify-content-end  mr ml-2" style="z-index: 10;">
+              <div class="flex align-items-center justify-content-end  mr ml-2">
                 <app-board-user [header]="'Faça login'">
                   <div activator>
-                      <h6> LOGIN </h6>
+                    <h6> LOGIN </h6>
                   </div>
-                <app-login></app-login>
+                  <app-login></app-login>
                 </app-board-user>
                 <!-- <a routerLink="login">
                   <h6> LOGIN </h6>

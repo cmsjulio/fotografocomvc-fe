@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'user', component: BoardUserComponent },
   { path: 'mod', component: BoardModeratorComponent },
   { path: 'admin', component: BoardAdminComponent },
-  { path: 'photographer/:idLocation', component: PhotographerListComponent },
+  { path: 'photographers-by-location/:idLocation', component: PhotographerListComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 

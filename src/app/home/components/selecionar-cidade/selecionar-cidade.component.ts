@@ -1,3 +1,4 @@
+import { LocationService } from './../../../service/location.service';
 import { Router } from '@angular/router';
 import { Location } from './../../../models/location.model';
 import { Component, OnInit } from '@angular/core';
@@ -8,12 +9,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./selecionar-cidade.component.css'],
 })
 export class SelecionarCidadeComponent implements OnInit {
-  public locationList: Location[] = [
-    { id: 1, locationCity: 'rio de janeiro', locationState: 'RJ' },
-    { id: 2, locationCity: 'sao paulo', locationState: 'SP' },
-    { id: 3, locationCity: 'niterói', locationState: 'RJ' },
-    { id: 4, locationCity: 'santos', locationState: 'SP' },
-  ];
+
+  public locationList: Location[];
+
   public selectedState: string = '-';
   public selectedCity: string = '-';
   public selectedLocation: Location;
@@ -22,14 +20,21 @@ export class SelecionarCidadeComponent implements OnInit {
   public locationCityList: Location[];
   public isLocationSelected: boolean;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private locationService: LocationService) {}
 
   ngOnInit(): void {
-    let states = this.locationList.map((location) => {
-      return location.locationState;
-    });
-    this.locationStateList = [...new Set(states)];
-    console.log(this.locationStateList);
+        this.locationService.findAllLocation().subscribe((response) => {
+          this.locationList = response;
+          console.log(response);
+
+          let states = this.locationList.map((location) => {
+            return location.locationState;
+          });
+          this.locationStateList = [...new Set(states)];
+          console.log(this.locationStateList);
+        })
+
+
   }
 
   public itemStateClick(location: string): void {
@@ -51,7 +56,7 @@ export class SelecionarCidadeComponent implements OnInit {
 
   public submitLocationRequest(): void {
     if (this.isLocationSelected) {
-      this.router.navigate(['/photographer/' + this.selectedLocation.id]);
+      this.router.navigate(['/photographers-by-location/' + this.selectedLocation.id]);
     }
   }
 }

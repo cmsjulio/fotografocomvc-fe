@@ -1,0 +1,88 @@
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: #818181;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 9px;
+  width: 180px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #818181;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 9px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #5f5f5f;
+}
+
+.dropdown-item{
+  cursor: pointer;
+}
+
+.dropdown-item{
+  display: flex;
+  justify-content: center;
+  border: 1px;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+/* flex justify-content-center border-1 cursor-pointer */
+.buscar-button{
+  font-size: 2rem;
+  color: white;
+  /* background-color: #2C0A34; */
+  margin-top: 0;
+  border-radius: 9px;
+  padding: 5px;
+  min-width: 300px;
+  max-width: 700px;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+
+.buscar-button-on{
+  cursor: pointer;
+  background-color: #2C0A34;
+}
+
+.buscar-button-off{
+  cursor: default;
+  background-color: rgb(71, 71, 71);
+  color: rgb(119, 119, 119);
+
+}
+
