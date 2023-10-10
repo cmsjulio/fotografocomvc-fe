@@ -1,6 +1,7 @@
-import { Role } from "./role.model";
+import { Location } from './location.model';
+import { Role } from './role.model';
 
-export class Photographer{
+export class Photographer {
   id?: string;
   name?: string;
   gender?: string;

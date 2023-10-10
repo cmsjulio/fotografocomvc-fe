@@ -1,0 +1,23 @@
+<div class="profile-banner-holder">
+  <div class="left-block">
+    <div class="breadcrumb-fitter">
+      <div class="breadcrumb-text">
+        início > resultado de busca > {{ photographer.name | lowercase }}
+      </div>
+    </div>
+
+    <div class="profile-pic" *ngIf="hasPicture">
+      <figure
+        style="justify-content: flex-start; align-items: center; display: flex"
+      >
+        <img [src]="thumb" alt="..." style="color: black" />
+      </figure>
+    </div>
+  </div>
+  <div class="middle-block">
+    <h2>{{ photographer.name | uppercase }}</h2>
+    <h3>{{ photographer.phone }}</h3>
+    <h3>{{ photographer.shortInfo }}</h3>
+    <h3>{{ photographer.location?.locationCity }}</h3>
+  </div>
+</div>

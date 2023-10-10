@@ -4,21 +4,23 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
 
-
 const API_URL = environment.BASE_API_URL + 'photographer';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PhotographerService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  findAllPhotographerByLocationId(locationId: string): Observable<Photographer[]> {
-    return this.http.get<Photographer[]>(`${API_URL}/public/findAllByLocationId/${locationId}`);
+  findAllPhotographerByLocationId(
+    locationId: string
+  ): Observable<Photographer[]> {
+    return this.http.get<Photographer[]>(
+      `${API_URL}/public/findAllByLocationId/${locationId}`
+    );
   }
 
-  // findById(certameId: string): Observable<Certame> {
-  //   return this.http.get<Certame>(`${this.baseUrl}/${certameId}`);
-  // }
-
+  findById(photographerId: string): Observable<Photographer> {
+    return this.http.get<Photographer>(`${API_URL}/public/${photographerId}`);
+  }
 }

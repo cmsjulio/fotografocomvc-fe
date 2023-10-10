@@ -26,6 +26,7 @@ import { ImageGalleryCardComponent } from './profile/components/image-gallery-ca
 import { UploadImageComponent } from './profile/components/upload-image/upload-image.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProfileBannerComponent } from './profile/components/profile-banner/profile-banner.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FilterModalComponent,
     ImageGalleryCardComponent,
     UploadImageComponent,
+    ProfileBannerComponent,
 
   ],
   imports: [
