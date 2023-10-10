@@ -29,6 +29,7 @@ export class ProfileComponent implements OnInit {
 
     this.imageService.getGalleryFromPhotographerId(this.photographerId).subscribe((response) => {
       this.imageList = response;
+      this.imageList.sort((a,b) => Number(b.id) - Number(a.id));
       this.showGallery = true;
     })
   }

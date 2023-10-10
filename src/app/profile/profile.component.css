@@ -65,7 +65,8 @@ flex-direction: row;
 .filter-button{
   z-index: 1;
   margin-bottom: -1em;
-  background-color: #4E096F;
+  /* background-color: #4E096F; */
+  /* background-color: black; */
   border-radius: 9px;
   padding: .5em 2em;
   cursor: pointer;

@@ -18,13 +18,16 @@
 
 
         <div class="selector">
-          <div (click)="displayStatus='GALERIA'" class="filter-button">
+          <div (click)="displayStatus='GALERIA'" class="filter-button"
+            [ngStyle]="{'background-color': displayStatus==='GALERIA' ? '#4E096F' : 'black' }">
             <div>GALERIA</div>
           </div>
-          <div (click)="displayStatus='ENTREGAS'" class="filter-button">
+          <div (click)="displayStatus='ENTREGAS'" class="filter-button"
+            [ngStyle]="{'background-color': displayStatus==='ENTREGAS' ? '#4E096F' : 'black' }">
             <div>ENTREGAS</div>
           </div>
-          <div (click)="displayStatus='DETALHES'" class="filter-button">
+          <div (click)="displayStatus='DETALHES'" class="filter-button"
+            [ngStyle]="{'background-color': displayStatus==='DETALHES' ? '#4E096F' : 'black' }">
             <div>DETALHES</div>
           </div>
         </div>
