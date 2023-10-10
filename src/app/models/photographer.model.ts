@@ -1,7 +1,7 @@
 import { Role } from "./role.model";
 
 export class Photographer{
-  id?: number;
+  id?: string;
   name?: string;
   gender?: string;
   shortInfo?: string;

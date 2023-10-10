@@ -21,7 +21,6 @@ export class PhotographerListComponent implements OnInit {
     this.photographerService.findAllPhotographerByLocationId(this.locationId).subscribe((response) => {
       this.photographerList = response;
       this.showProfiles = true;
-      console.log(response);
     })
   }
 

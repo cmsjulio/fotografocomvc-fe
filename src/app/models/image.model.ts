@@ -1,6 +1,7 @@
 export class Image{
-  id?: number;
+  id?: string;
   name?: string;
   formatType?: string;
   originalImage?: any[];
+  description?: string;
 }

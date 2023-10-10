@@ -1,0 +1,16 @@
+<form [formGroup]="form" enctype="multipart/form-data" (ngSubmit)="submitForm()">
+  <div class="form-group">
+    <label for="trip">Trip:</label>
+    <input formControlName="imageDescription" type="text" id="imageDescription" name="Descrição"
+      placeholder="Descriçao da imagem">
+  </div>
+
+  <div class="form-group">
+    <label for="image">Imagem:</label>
+    <input formControlName="image" type="file" id="image" name="image" accept="image/*" (change)="uploadFile($event)">
+  </div>
+
+  <div class="form-group">
+    <button (click)="submitForm()">Upload files</button>
+  </div>
+</form>

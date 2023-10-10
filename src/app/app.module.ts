@@ -22,6 +22,10 @@ import { InputTextModule } from 'primeng/inputtext';
 import { SelecionarCidadeComponent } from './home/components/selecionar-cidade/selecionar-cidade.component';
 import { PhotographerCardComponent } from './photographer/components/photographer-card/photographer-card.component';
 import { FilterModalComponent } from './photographer/components/filter-modal/filter-modal.component';
+import { ImageGalleryCardComponent } from './profile/components/image-gallery-card/image-gallery-card.component';
+import { UploadImageComponent } from './profile/components/upload-image/upload-image.component';
+
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -39,6 +43,9 @@ import { FilterModalComponent } from './photographer/components/filter-modal/fil
     PhotographerListComponent,
     PhotographerCardComponent,
     FilterModalComponent,
+    ImageGalleryCardComponent,
+    UploadImageComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -46,6 +53,7 @@ import { FilterModalComponent } from './photographer/components/filter-modal/fil
     FormsModule,
     HttpClientModule,
     InputTextModule,
+    ReactiveFormsModule,
     ButtonModule,
   ],
   providers: [authInterceptorProviders],

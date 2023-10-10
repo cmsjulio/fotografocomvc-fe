@@ -35,8 +35,8 @@
               </div>
             </div>
             <div *ngIf="isLoggedIn" class="flex justify-content-end flex-wrap">
-              <div class="flex align-items-center justify-content-end  mr-2 ml-2">
-                <a routerLink="user">
+              <div (click)="goToSelfProfile()" class="flex align-items-center justify-content-end  mr-2 ml-2">
+                <a>
                   <h6> MEU PERFIL </h6>
                 </a>
               </div>

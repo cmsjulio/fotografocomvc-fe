@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   showAdminBoard = false;
   showModeratorBoard = false;
   username?: string;
+  profileId: string;
 
   constructor(private tokenStorageService: TokenStorageService,
     private router: Router) { }
@@ -24,10 +25,10 @@ export class HeaderComponent implements OnInit {
       const user = this.tokenStorageService.getUser();
       this.roles = user.roles;
 
-      this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
-      this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
-
       this.username = user.username;
+      this.profileId = user.photographerId;
+
+
     }
   }
 
@@ -36,4 +37,13 @@ export class HeaderComponent implements OnInit {
     window.location.reload();
     this.router.navigate(['/home']);
   }
+
+  public goToSelfProfile(): void{
+    this.router.navigate(['/profile/' + this.profileId])
+  .then(() => {
+    window.location.reload();
+  });
+
+  }
+
 }

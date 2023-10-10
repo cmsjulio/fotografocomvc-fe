@@ -1,0 +1,82 @@
+.full-height {
+  min-height: 10vh;
+  margin: 0;
+  background: #2C0A34;
+  color: white;
+}
+
+.board-1-photographer{
+  height: 14vw;
+  background-color: #4E096F;
+  border: white;
+  border-width: 0.2vw;
+  border-style: solid none solid none
+}
+
+
+.board-2-photographer{
+  min-height: 27vw;
+  background-color: #2C0A34;
+  border: white;
+  border-width: 0.2vw;
+  border-style: solid none none none;
+}
+
+.create-button{
+  position: relative;
+  top: 20px;
+  left: -230px;
+  width: 0px;
+  height: 50px;
+  border: 3px solid #73AD21;
+  z-index: 1;
+  margin-bottom: -1em;
+  background-color: #4E096F;
+  border-radius: 9px;
+  padding: .5em 2em;
+  cursor: pointer;
+  margin-left: 3px;
+  margin-right: 3px;
+
+}
+
+.filtrar-wrapper{
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #1B0028;
+  border: white;
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  padding: 2vh 4vh;
+
+}
+
+.selector{z-index: 1; display: flex;
+  display: flex;
+  justify-content: flex-start;
+display: flex;
+justify-content: center;
+flex-direction: row;
+}
+
+.filter-button{
+  z-index: 1;
+  margin-bottom: -1em;
+  background-color: #4E096F;
+  border-radius: 9px;
+  padding: .5em 2em;
+  cursor: pointer;
+  margin-left: 3px;
+  margin-right: 3px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.filter-button:hover{
+ cursor: pointer;
+  box-shadow: 0 0 3px rgba(255, 255, 255, .6);
+}

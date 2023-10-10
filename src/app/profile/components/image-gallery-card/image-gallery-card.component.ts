@@ -1,26 +1,23 @@
 import { Router } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
-import { Image } from './../../../models/image.model';
 import { ImageService } from './../../../service/image.service';
-import { Photographer } from './../../../models/photographer.model';
+import { Image } from './../../../models/image.model';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-photographer-card',
-  templateUrl: './photographer-card.component.html',
-  styleUrls: ['./photographer-card.component.css']
+  selector: 'app-image-gallery-card',
+  templateUrl: './image-gallery-card.component.html',
+  styleUrls: ['./image-gallery-card.component.css']
 })
-export class PhotographerCardComponent implements OnInit {
-
-  @Input() photographer: Photographer;
-  public image: Image;
+export class ImageGalleryCardComponent implements OnInit {
+  @Input() image: Image;
   public thumb: any;
 
   constructor(private imageService: ImageService, private sanitizer: DomSanitizer,     private router: Router
     ) { }
 
   ngOnInit(): void {
-    this.imageService.getImageById(this.photographer.profilePicImageId).subscribe((response) => {
+    this.imageService.getImageById(this.image.id).subscribe((response) => {
       this.image = response;
       console.log(response);
 
@@ -30,9 +27,5 @@ export class PhotographerCardComponent implements OnInit {
     })
   }
 
-  public goToProfile(id?: string): void{
-    this.router.navigate(['/profile/' + id]);
-
-  }
 
 }
