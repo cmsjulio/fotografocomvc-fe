@@ -1,0 +1,43 @@
+.content-wrapper {
+  background-color: black;
+  border: white;
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  padding: 1vh 2vh;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.dados {
+  display: flex;
+}
+
+.dados-basicos-left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.dados-basicos-right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.main-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.sub-block {
+  margin-bottom: 2em;
+  width: 100%;
+}

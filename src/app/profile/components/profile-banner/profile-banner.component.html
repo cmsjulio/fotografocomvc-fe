@@ -13,11 +13,20 @@
         <img [src]="thumb" alt="..." style="color: black" />
       </figure>
     </div>
+    <div class="profile-pic-off" *ngIf="!hasPicture">-foto-</div>
   </div>
   <div class="middle-block">
-    <h2>{{ photographer.name | uppercase }}</h2>
-    <h3>{{ photographer.phone }}</h3>
-    <h3>{{ photographer.shortInfo }}</h3>
-    <h3>{{ photographer.location?.locationCity }}</h3>
+    <h2>
+      {{ photographer.name | uppercase }}
+    </h2>
+    <h3>{{ photographer.phone ? photographer.phone : "-telefone-" }}</h3>
+    <h3>{{ photographer.shortInfo ? photographer.shortInfo : "-info-" }}</h3>
+    <h3>
+      {{
+        photographer.location?.locationCity
+          ? photographer.location?.locationCity
+          : "-cidade-"
+      }}
+    </h3>
   </div>
 </div>

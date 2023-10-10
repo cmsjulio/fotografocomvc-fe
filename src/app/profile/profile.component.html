@@ -70,7 +70,10 @@
         ENTREGAS
       </div>
       <div *ngIf="displayStatus == 'DETALHES'" class="filtrar-wrapper w-12">
-        DETALHES
+        <app-detalhes-card
+          [photographer]="photographer"
+          style="width: 100%"
+        ></app-detalhes-card>
       </div>
     </div>
   </div>

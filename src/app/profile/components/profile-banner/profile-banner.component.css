@@ -36,6 +36,12 @@
   justify-content: flex-start;
 }
 
+.profile-pic-off {
+  display: flex;
+  height: 80%;
+  justify-content: flex-start;
+}
+
 figure {
   margin: 0;
   height: 100%;

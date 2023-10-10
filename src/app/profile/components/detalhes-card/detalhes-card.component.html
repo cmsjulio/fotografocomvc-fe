@@ -1,0 +1,81 @@
+<div class="main-block">
+  <!-- DADOS BÁSICOS -->
+  <div class="sub-block">
+    <div class="content-wrapper title">DADOS BÁSICOS</div>
+    <div class="content-wrapper dados">
+      <div class="dados-basicos-left">
+        <div style="display: flex; flex-direction: column; width: 60%">
+          <div class="flex p-3 pr-8" style="justify-content: space-between">
+            <div class="flex mr-5">NOME:</div>
+            <div class="flex">{{ photographer.name }}</div>
+          </div>
+          <div class="flex p-3 pr-8" style="justify-content: space-between">
+            <div class="flex mr-5">TELEFONE:</div>
+            <div class="flex">{{ photographer.phone }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="dados-basicos-right">
+        <div style="display: flex; flex-direction: column; width: 60%">
+          <div class="flex p-3 pr-8" style="justify-content: space-between">
+            <div class="flex mr-5">SEXO:</div>
+            <div class="flex">
+              {{
+                photographer.gender?.valueOf() == "MASCULINE"
+                  ? "Masculino"
+                  : "Feminino"
+              }}
+            </div>
+          </div>
+          <div class="flex p-3 pr-8" style="justify-content: space-between">
+            <div class="flex mr-5">BIO:</div>
+            <div class="flex">{{ photographer.bio }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOCALIDADE E TIPO DE EVENTO -->
+  <div class="sub-block">
+    <div class="content-wrapper title">LOCALIDADE E TIPO DE EVENTO</div>
+    <div class="content-wrapper flex">
+      <div class="dados-basicos-left">
+        <div style="display: flex; flex-direction: column">
+          <div class="flex p-3 pr-8" style="justify-content: space-between">
+            <div class="flex mr-5">ATENDE EM:</div>
+            <div class="flex">
+              {{ photographer.location?.locationCity }},
+              {{ photographer.location?.locationState }}
+            </div>
+          </div>
+          <div class="flex p-3 pr-8" style="justify-content: space-between">
+            <div class="flex mr-5">TIPO DE EVENTO:</div>
+            <div class="flex">tipo de evento</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EQUIPAMENTO-->
+  <div class="sub-block">
+    <div class="content-wrapper title">EQUIPAMENTO</div>
+    <div class="content-wrapper"></div>
+  </div>
+
+  <!-- MAIS SOBRE MIM-->
+  <div class="sub-block">
+    <div class="content-wrapper title">MAIS SOBRE MIM</div>
+    <div class="content-wrapper flex">
+      <div class="dados-basicos-left">
+        <div style="display: flex; flex-direction: column">
+          <div class="flex p-3 pr-8" style="justify-content: space-between">
+            <div class="flex mr-5">MAIS SOBRE MIM:</div>
+            <div class="flex">{{ photographer.aboutMe }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
