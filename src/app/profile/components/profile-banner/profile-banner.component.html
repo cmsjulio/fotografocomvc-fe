@@ -7,13 +7,14 @@
     </div>
 
     <div class="profile-pic" *ngIf="hasPicture">
-      <figure
-        style="justify-content: flex-start; align-items: center; display: flex"
-      >
-        <img [src]="thumb" alt="..." style="color: black" />
+      <figure style="justify-content: flex-start; align-items: center; display: flex">
+        <img [src]="thumb" alt="..." style="color: black"
+          [ngStyle]="{'cursor':isProfileOwner ? 'pointer' : 'default' }" />
       </figure>
     </div>
-    <div class="profile-pic-off" *ngIf="!hasPicture">-foto-</div>
+    <div class="filter-button" *ngIf="!hasPicture" [ngStyle]="{'cursor':isProfileOwner ? 'pointer' : 'default' }">
+      -foto-
+    </div>
   </div>
   <div class="middle-block">
     <h2>
@@ -23,9 +24,9 @@
     <h3>{{ photographer.shortInfo ? photographer.shortInfo : "-info-" }}</h3>
     <h3>
       {{
-        photographer.location?.locationCity
-          ? photographer.location?.locationCity
-          : "-cidade-"
+      photographer.location?.locationCity
+      ? photographer.location?.locationCity
+      : "-cidade-"
       }}
     </h3>
   </div>

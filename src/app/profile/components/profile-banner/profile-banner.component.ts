@@ -11,6 +11,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProfileBannerComponent implements OnInit {
   @Input() photographer: Photographer;
+  @Input() isProfileOwner: boolean;
   public profilePic: Image;
   public thumb: any;
   public hasPicture: boolean = false;

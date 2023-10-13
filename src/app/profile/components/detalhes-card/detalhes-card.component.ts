@@ -9,6 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DetalhesCardComponent implements OnInit {
   constructor() {}
   @Input() photographer: Photographer;
+  @Input() isProfileOwner: boolean;
 
   ngOnInit(): void {}
 }

@@ -1,33 +1,39 @@
 <div class="main-block">
   <!-- DADOS BÁSICOS -->
   <div class="sub-block">
-    <div class="content-wrapper title">DADOS BÁSICOS</div>
+    <div class="content-wrapper title">DADOS BÁSICOS<div *ngIf="isProfileOwner" class="filter-button"
+        style="background-color: #0d99ff; z-index: 3">
+      </div>
+    </div>
     <div class="content-wrapper dados">
       <div class="dados-basicos-left">
-        <div style="display: flex; flex-direction: column; width: 60%">
-          <div class="flex p-3 pr-8" style="justify-content: space-between">
+        <div style="display: flex; flex-direction: column; ">
+          <div class="flex p-3 pr-8" style="justify-content: flex-start">
             <div class="flex mr-5">NOME:</div>
             <div class="flex">{{ photographer.name }}</div>
           </div>
-          <div class="flex p-3 pr-8" style="justify-content: space-between">
+          <div class="flex p-3 pr-8" style="justify-content: flex-start">
             <div class="flex mr-5">TELEFONE:</div>
             <div class="flex">{{ photographer.phone }}</div>
+          </div>
+          <div class="flex p-3 pr-8" style="justify-content: flex-start">
+            <div class="flex mr-5">INFO:</div>
+            <div class="flex">{{ photographer.shortInfo }}</div>
           </div>
         </div>
       </div>
       <div class="dados-basicos-right">
-        <div style="display: flex; flex-direction: column; width: 60%">
-          <div class="flex p-3 pr-8" style="justify-content: space-between">
+        <div style="display: flex; flex-direction: column;">
+          <div class="flex p-3 pr-8" style="justify-content: flex-start">
             <div class="flex mr-5">SEXO:</div>
             <div class="flex">
               {{
-                photographer.gender?.valueOf() == "MASCULINE"
-                  ? "Masculino"
-                  : "Feminino"
+              photographer.gender?.valueOf()=="MASCULINE" ? photographer.gender?.valueOf()?.slice(0,4) :
+              photographer.gender?.valueOf()?.slice(0,3)
               }}
             </div>
           </div>
-          <div class="flex p-3 pr-8" style="justify-content: space-between">
+          <div class="flex p-3 pr-8" style="justify-content: flex-start; ">
             <div class="flex mr-5">BIO:</div>
             <div class="flex">{{ photographer.bio }}</div>
           </div>
@@ -38,18 +44,20 @@
 
   <!-- LOCALIDADE E TIPO DE EVENTO -->
   <div class="sub-block">
-    <div class="content-wrapper title">LOCALIDADE E TIPO DE EVENTO</div>
+    <div class="content-wrapper title">LOCALIDADE E TIPO DE EVENTO<div *ngIf="isProfileOwner" class="filter-button"
+        style="background-color: #0d99ff; z-index: 3">
+      </div>
+    </div>
     <div class="content-wrapper flex">
       <div class="dados-basicos-left">
         <div style="display: flex; flex-direction: column">
-          <div class="flex p-3 pr-8" style="justify-content: space-between">
+          <div class="flex p-3 pr-8" style="justify-content: flex-start">
             <div class="flex mr-5">ATENDE EM:</div>
-            <div class="flex">
-              {{ photographer.location?.locationCity }},
-              {{ photographer.location?.locationState }}
+            <div class="flex"> {{ photographer.location ? photographer.location.locationCity + ', ' +
+              photographer.location.locationState : '' }}
             </div>
           </div>
-          <div class="flex p-3 pr-8" style="justify-content: space-between">
+          <div class="flex p-3 pr-8" style="justify-content: flex-start">
             <div class="flex mr-5">TIPO DE EVENTO:</div>
             <div class="flex">tipo de evento</div>
           </div>
@@ -60,17 +68,52 @@
 
   <!-- EQUIPAMENTO-->
   <div class="sub-block">
-    <div class="content-wrapper title">EQUIPAMENTO</div>
-    <div class="content-wrapper"></div>
+    <div class="content-wrapper title">EQUIPAMENTO<div *ngIf="isProfileOwner" class="filter-button"
+        style="background-color: #0d99ff; z-index: 3">
+      </div>
+    </div>
+    <div class="content-wrapper flex">
+      <div class="dados-basicos-left">
+        <div style="display: flex; flex-direction: column">
+          <div class="flex p-3 pr-8" style="justify-content: flex-start">
+            <div class="flex mr-5">NOME:</div>
+            <div class="flex"> Câmera digital Canon t6i
+            </div>
+          </div>
+          <div class="flex p-3 pr-8" style="justify-content: flex-start">
+            <div class="flex mr-5">CATEGORIA:</div>
+            <div class="flex">Câmera digital cropped</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-wrapper flex">
+      <div class="dados-basicos-left">
+        <div style="display: flex; flex-direction: column">
+          <div class="flex p-3 pr-8" style="justify-content: flex-start">
+            <div class="flex mr-5">NOME:</div>
+            <div class="flex"> Drone de filmagem PK6s
+            </div>
+          </div>
+          <div class="flex p-3 pr-8" style="justify-content: flex-start">
+            <div class="flex mr-5">CATEGORIA:</div>
+            <div class="flex">Drone</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- MAIS SOBRE MIM-->
   <div class="sub-block">
-    <div class="content-wrapper title">MAIS SOBRE MIM</div>
+    <div class="content-wrapper title">MAIS SOBRE MIM<div *ngIf="isProfileOwner" class="filter-button"
+        style="background-color: #0d99ff; z-index: 3">
+      </div>
+    </div>
     <div class="content-wrapper flex">
       <div class="dados-basicos-left">
         <div style="display: flex; flex-direction: column">
-          <div class="flex p-3 pr-8" style="justify-content: space-between">
+          <div class="flex p-3 pr-8" style="justify-content: flex-start">
             <div class="flex mr-5">MAIS SOBRE MIM:</div>
             <div class="flex">{{ photographer.aboutMe }}</div>
           </div>

@@ -28,6 +28,7 @@ import { UploadImageComponent } from './profile/components/upload-image/upload-i
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProfileBannerComponent } from './profile/components/profile-banner/profile-banner.component';
 import { DetalhesCardComponent } from './profile/components/detalhes-card/detalhes-card.component';
+import { SearchBannerComponent } from './photographer/components/search-banner/search-banner.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { DetalhesCardComponent } from './profile/components/detalhes-card/detalh
     UploadImageComponent,
     ProfileBannerComponent,
     DetalhesCardComponent,
+    SearchBannerComponent,
 
   ],
   imports: [
