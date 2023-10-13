@@ -29,6 +29,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ProfileBannerComponent } from './profile/components/profile-banner/profile-banner.component';
 import { DetalhesCardComponent } from './profile/components/detalhes-card/detalhes-card.component';
 import { SearchBannerComponent } from './photographer/components/search-banner/search-banner.component';
+import { DadosBasicosFormComponent } from './profile/components/dados-basicos-form/dados-basicos-form.component';
+import { LocalidadeEventoFormComponent } from './profile/components/localidade-evento-form/localidade-evento-form.component';
+import { EquipamentoFormComponent } from './profile/components/equipamento-form/equipamento-form.component';
+import { MaisSobreMimFormComponent } from './profile/components/mais-sobre-mim-form/mais-sobre-mim-form.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +55,10 @@ import { SearchBannerComponent } from './photographer/components/search-banner/s
     ProfileBannerComponent,
     DetalhesCardComponent,
     SearchBannerComponent,
+    DadosBasicosFormComponent,
+    LocalidadeEventoFormComponent,
+    EquipamentoFormComponent,
+    MaisSobreMimFormComponent,
 
   ],
   imports: [

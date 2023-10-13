@@ -1,11 +1,19 @@
 <div class="main-block">
   <!-- DADOS BÁSICOS -->
   <div class="sub-block">
-    <div class="content-wrapper title">DADOS BÁSICOS<div *ngIf="isProfileOwner" class="filter-button"
-        style="background-color: #0d99ff; z-index: 3">
-      </div>
+    <div class="content-wrapper title">DADOS BÁSICOS
+
+      <app-board-user *ngIf="isProfileOwner" [header]="'Editar perfil'" style="z-index: 3;">
+        <div activator>
+          <div *ngIf="isProfileOwner" class="filter-button" style="background-color: #0d99ff;">
+          </div>
+        </div>
+        <app-dados-basicos-form [photographer]="photographer"></app-dados-basicos-form>
+      </app-board-user>
+
+
     </div>
-    <div class="content-wrapper dados">
+    <div class=" content-wrapper dados">
       <div class="dados-basicos-left">
         <div style="display: flex; flex-direction: column; ">
           <div class="flex p-3 pr-8" style="justify-content: flex-start">
@@ -44,9 +52,16 @@
 
   <!-- LOCALIDADE E TIPO DE EVENTO -->
   <div class="sub-block">
-    <div class="content-wrapper title">LOCALIDADE E TIPO DE EVENTO<div *ngIf="isProfileOwner" class="filter-button"
-        style="background-color: #0d99ff; z-index: 3">
-      </div>
+    <div class="content-wrapper title">LOCALIDADE E TIPO DE EVENTO
+
+      <app-board-user *ngIf="isProfileOwner" [header]="'Editar perfil'" style="z-index: 3;">
+        <div activator>
+          <div *ngIf="isProfileOwner" class="filter-button" style="background-color: #0d99ff;">
+          </div>
+        </div>
+        <app-localidade-evento-form [photographer]="photographer"></app-localidade-evento-form>
+      </app-board-user>
+
     </div>
     <div class="content-wrapper flex">
       <div class="dados-basicos-left">
@@ -68,9 +83,17 @@
 
   <!-- EQUIPAMENTO-->
   <div class="sub-block">
-    <div class="content-wrapper title">EQUIPAMENTO<div *ngIf="isProfileOwner" class="filter-button"
-        style="background-color: #0d99ff; z-index: 3">
-      </div>
+    <div class="content-wrapper title">EQUIPAMENTO
+
+
+      <app-board-user *ngIf="isProfileOwner" [header]="'Editar perfil'" style="z-index: 3;">
+        <div activator>
+          <div *ngIf="isProfileOwner" class="filter-button" style="background-color: #0d99ff;">
+          </div>
+        </div>
+        <app-equipamento-form [photographer]="photographer"></app-equipamento-form>
+      </app-board-user>
+
     </div>
     <div class="content-wrapper flex">
       <div class="dados-basicos-left">
@@ -106,9 +129,17 @@
 
   <!-- MAIS SOBRE MIM-->
   <div class="sub-block">
-    <div class="content-wrapper title">MAIS SOBRE MIM<div *ngIf="isProfileOwner" class="filter-button"
-        style="background-color: #0d99ff; z-index: 3">
-      </div>
+    <div class="content-wrapper title">MAIS SOBRE MIM
+
+      <app-board-user *ngIf="isProfileOwner" [header]="'Editar perfil'" style="z-index: 3;">
+        <div activator>
+          <div *ngIf="isProfileOwner" class="filter-button" style="background-color: #0d99ff;">
+          </div>
+        </div>
+        <app-mais-sobre-mim-form [photographer]="photographer"></app-mais-sobre-mim-form>
+      </app-board-user>
+
+
     </div>
     <div class="content-wrapper flex">
       <div class="dados-basicos-left">
