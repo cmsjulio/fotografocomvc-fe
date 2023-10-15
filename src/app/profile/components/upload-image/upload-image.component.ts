@@ -1,3 +1,4 @@
+import { environment } from './../../../../environments/environment.prod';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
@@ -28,10 +29,10 @@ export class UploadImageComponent implements OnInit {
     formData.append('imageDescription', this.form.get('imageDescription')?.value);
 
 
-     this.http.post('http://localhost:8080/fotografocomvc-api/photographer/private/gallery', formData)
+     this.http.post(environment.BASE_API_URL + 'photographer/private/gallery', formData)
     .subscribe(
        (response) =>{
-        // console.log(response)
+        console.log(response)
         window.location.reload();
       },
        (error) =>{console.log(error)}
