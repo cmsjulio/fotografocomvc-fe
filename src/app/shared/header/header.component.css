@@ -16,6 +16,7 @@ h4:hover, a:hover, h6:hover {
 
 a {
   text-decoration: none;
+  z-index: 1;
 }
 
 .header-height{

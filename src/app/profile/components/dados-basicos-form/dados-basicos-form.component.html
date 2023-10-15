@@ -1,5 +1,31 @@
-<p>dados-basicos-form works!</p>
+<form name="form">
+  <div class="flex flex-column">
 
-<h2>
-  {{photographer.name}}
-</h2>
+    <label for="name">Nome:</label>
+    <input class="mb-3 input-style" [(ngModel)]="form.name" name="name" type="text" />
+
+    <label for="phone">Telefone:</label>
+    <input class="mb-3 input-style" [(ngModel)]="form.phone" name="phone" type="text" />
+
+
+    <label for="shortInfo">Info:</label>
+    <input class="mb-3 input-style" [(ngModel)]="form.shortInfo" name="shortInfo" type="text" />
+
+    <label for="sexo">Sexo:</label>
+    <select class="mb-3 input-style" name="sexo" [(ngModel)]="form.gender">
+      <option>MASCULINE</option>
+      <option>FEMININE</option>
+    </select>
+
+    <label for="bio">Bio:</label>
+    <input class="mb-3 input-style" [(ngModel)]="form.bio" name="bio" type="text" />
+
+    <div class="flex justify-content-center">
+      <button class="filter-button" style="background-color: green; color: white; border: none;"
+        (click)="submitUpdate()">Editar</button>
+      <button (click)="voltarClick()" class="filter-button"
+        style="background-color: black; color: white; border: none">Voltar</button>
+    </div>
+
+  </div>
+</form>

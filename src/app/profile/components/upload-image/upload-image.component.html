@@ -1,16 +1,28 @@
-<form [formGroup]="form" enctype="multipart/form-data" (ngSubmit)="submitForm()">
-  <div class="form-group">
-    <label for="trip">Trip:</label>
-    <input formControlName="imageDescription" type="text" id="imageDescription" name="Descrição"
-      placeholder="Descriçao da imagem">
+<div>
+  <div>
+    <div style="display: inline;">
+      <form [formGroup]="form" enctype="multipart/form-data" (ngSubmit)="submitForm()"
+        style="display: flex; justify-content: space-between; flex-direction: column;">
+        <div class="form-group" style="display: flex; justify-content: space-between;">
+          <div>Descrição</div>
+          <input formControlName="imageDescription" type="text" id="imageDescription" name="Descrição"
+            style="width: 90%; background-color: #4E096F; color: white; border-color: white; border-style: solid;">
+        </div>
+
+        <div class="form-group">
+
+          <input formControlName="image" type="file" id="image" name="image" accept="image/*"
+            (change)="uploadFile($event)">
+        </div>
+      </form>
+    </div>
+
+
+    <div style="display: flex; justify-content: center;">
+      <div class="buscar-button" style="display: flex; justify-content: center;" (click)="submitForm()">
+        Enviar
+      </div>
+    </div>
   </div>
 
-  <div class="form-group">
-    <label for="image">Imagem:</label>
-    <input formControlName="image" type="file" id="image" name="image" accept="image/*" (change)="uploadFile($event)">
-  </div>
-
-  <div class="form-group">
-    <button>Upload files</button>
-  </div>
-</form>
+</div>

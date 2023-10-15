@@ -22,10 +22,6 @@ export class UploadImageComponent implements OnInit {
      })
    }
 
-   public upLoadImage(): void {
-    console.log("upload")
-   }
-
    submitForm() {
     let formData: any = new FormData();
     formData.append('image', this.form.get('image')?.value);

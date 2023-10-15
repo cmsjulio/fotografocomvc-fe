@@ -7,6 +7,7 @@
   padding: 1vh 2vh;
   margin-bottom: 1em;
   width: 100%;
+  padding: 2em 4em ;
 }
 
 .title {
@@ -16,7 +17,6 @@
 
 .dados {
   display: flex;
-  padding: 2em 4em;
 }
 
 .dados-basicos-left {

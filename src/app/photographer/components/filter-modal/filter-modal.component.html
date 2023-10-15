@@ -7,23 +7,20 @@
           {{selectedState}}
         </button> -->
         <button class="dropbtn">
-          testeTipoDeEvento
+          -
         </button>
         <div class="dropdown-content">
           <!-- <tr (click)="itemStateClick(location)" class="dropdown-item" *ngFor="let location of locationStateList">
             <td>{{location}}</td>
           </tr> -->
           <tr class="dropdown-item">
-            <td>item 1</td>
+            <td>Casamentos</td>
           <tr class="dropdown-item">
-            <td>item 2</td>
+            <td>Esportes</td>
           <tr class="dropdown-item">
-            <td>item 3</td>
+            <td>Newborn</td>
           <tr class="dropdown-item">
-            <td>item 4</td>
-          <tr class="dropdown-item">
-            <td>item 5</td>
-          </tr>
+            <td>Festa de 15 anos</td>
         </div>
       </div>
     </div>
@@ -31,15 +28,15 @@
       <div>Equipamento:</div>
       <div class="dropdown">
         <button class="dropbtn">
-          testeequip
+          -
         </button>
         <div class="dropdown-content">
           <tr class="dropdown-item">
-            <td>equip 1</td>
+            <td>Cropped</td>
           <tr class="dropdown-item">
-            <td>equip 2</td>
+            <td>Drone</td>
           <tr class="dropdown-item">
-            <td>equip 3</td>
+            <td>Full frame</td>
           </tr>
         </div>
       </div>
@@ -48,20 +45,20 @@
       <div>Sexo:</div>
       <div class="dropdown">
         <button class="dropbtn">
-          sexoEscolhido
+          -
         </button>
         <div class="dropdown-content">
           <tr class="dropdown-item">
-            <td>masculino</td>
+            <td>Masculino</td>
           <tr class="dropdown-item">
-            <td>feminino</td>
+            <td>Feminino</td>
           </tr>
         </div>
       </div>
     </div>
     <div style="display: flex; justify-content: center;">
-      <div class="buscar-button" style="display: flex; justify-content: center;">
-        Buscar
+      <div class="buscar-button" style="display: flex; justify-content: center;" (click)="submitFilterRequest()">
+        Filtrar
       </div>
     </div>
   </div>

@@ -54,7 +54,7 @@
 
 }
 
-.selector{z-index: 1; display: flex;
+.selector{z-index: 0; display: flex;
   display: flex;
   justify-content: flex-start;
 display: flex;

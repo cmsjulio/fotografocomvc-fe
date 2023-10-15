@@ -13,3 +13,14 @@ export class Photographer {
   location?: Location;
   profilePicImageId?: string;
 }
+
+
+export class PhotographerUpdate {
+  name?: string;
+  gender?: string;
+  shortInfo?: string;
+  bio?: string;
+  phone?: string;
+  aboutMe?: string;
+  locationId?: string;
+}

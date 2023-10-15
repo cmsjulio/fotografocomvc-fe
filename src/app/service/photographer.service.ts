@@ -1,4 +1,4 @@
-import { Photographer } from './../models/photographer.model';
+import { Photographer, PhotographerUpdate } from './../models/photographer.model';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from './../../environments/environment';
@@ -22,5 +22,9 @@ export class PhotographerService {
 
   findById(photographerId: string): Observable<Photographer> {
     return this.http.get<Photographer>(`${API_URL}/public/${photographerId}`);
+  }
+
+  updateOwnProfile(requestBody: PhotographerUpdate): Observable<Photographer>{
+    return this.http.put<Photographer>(`${API_URL}/private/updateOwnProfile`, requestBody);
   }
 }

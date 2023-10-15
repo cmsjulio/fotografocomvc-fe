@@ -8,9 +8,9 @@
   <div class="w-12 flex justify-content-center board-2-photographer">
     <div class="w-10 md:w-8 pt-5 pb-5 m-3 flex flex-column align-items-center">
       <div style="display: flex; flex-wrap: wrap; align-items: center">
-        <app-board-user *ngIf="isProfileOwner" [header]="'Adicionar foto à galeria'" style="z-index: 2">
+        <app-board-user *ngIf="isProfileOwner" [header]="'Adicionar foto à galeria'" style="z-index: 1">
           <div activator>
-            <div class="filter-button" style="background-color: #0d99ff; z-index: 3">
+            <div class="filter-button" style="background-color: #0d99ff; z-index: 1">
               +
             </div>
           </div>
@@ -39,11 +39,11 @@
         </div>
       </div>
       <div *ngIf="displayStatus == 'GALERIA'" class="filtrar-wrapper w-12">
-        <app-image-gallery-card class="w-12 md:w-6 lg:w-4 p-2" *ngFor="let image of imageList"
-          [image]="image"></app-image-gallery-card>
+        <app-image-gallery-card class="w-12 md:w-6 lg:w-4 p-2" *ngFor="let image of imageList" [image]="image"
+          [isProfileOwner]="isProfileOwner" [photographer]="photographer"></app-image-gallery-card>
       </div>
       <div *ngIf="displayStatus == 'ENTREGAS'" class="filtrar-wrapper w-12">
-        ENTREGAS
+        <app-entregas-card style="width: 100%"></app-entregas-card>
       </div>
       <div *ngIf="displayStatus == 'DETALHES'" class="filtrar-wrapper w-12">
         <app-detalhes-card [photographer]="photographer" [isProfileOwner]="isProfileOwner"

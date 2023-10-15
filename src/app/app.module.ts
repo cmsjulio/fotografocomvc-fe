@@ -33,6 +33,7 @@ import { DadosBasicosFormComponent } from './profile/components/dados-basicos-fo
 import { LocalidadeEventoFormComponent } from './profile/components/localidade-evento-form/localidade-evento-form.component';
 import { EquipamentoFormComponent } from './profile/components/equipamento-form/equipamento-form.component';
 import { MaisSobreMimFormComponent } from './profile/components/mais-sobre-mim-form/mais-sobre-mim-form.component';
+import { EntregasCardComponent } from './profile/components/entregas-card/entregas-card.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { MaisSobreMimFormComponent } from './profile/components/mais-sobre-mim-f
     LocalidadeEventoFormComponent,
     EquipamentoFormComponent,
     MaisSobreMimFormComponent,
+    EntregasCardComponent,
 
   ],
   imports: [

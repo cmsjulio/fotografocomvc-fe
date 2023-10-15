@@ -34,6 +34,7 @@ figure{
 img {
   display: flex;
   height: 100%;
+  z-index: 3;
   /* width: 100%; */
   /* aspect-ratio: 1 / 1; */
   width: auto;
@@ -74,10 +75,26 @@ hr {
 }
 
 .profile-bio{
-  z-index: 3;
+  z-index: 0;
   width: 85%;
   font-size: 12px;
   overflow: hidden;
   text-align: justify;
   margin-bottom: 2em;
 }
+
+
+.filter-button{
+  z-index: 1;
+  /* background-color: #4E096F; */
+  /* background-color: black; */
+  border-radius: 6px;
+  padding: .7em .7em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0 .3em
+}
+
+

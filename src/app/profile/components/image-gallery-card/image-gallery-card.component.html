@@ -1,16 +1,72 @@
-<div class="card-holder">
+<app-board-user class="profile-pic" [header]='"Foto de " + photographer?.name' style="z-index: 999999;">
+  <div activator>
 
+    <div class="card-holder" style="z-index: 1;">
+      <div class="profile-pic">
+        <figure>
+          <img [src]='thumb' alt="-foto-" style="width:100%; color: black; overflow: hidden; display: flex;">
+        </figure>
+      </div>
+      <div class="profile-info">
+        <div class="profile-divider">
+          <hr>
+        </div>
+        <div class="profile-bio">
+
+          {{image.description}}
+        </div>
+      </div>
+    </div>
+
+  </div>
   <div class="profile-pic">
     <figure>
       <img [src]='thumb' alt="..." style="width:100%; color: black; overflow: hidden; display: flex;">
     </figure>
   </div>
-  <div class="profile-info">
-    <div class="profile-divider">
-      <hr>
+  <div class="flex flex-column p-2">
+    <div class="flex flex-direction">
+      <hr class="w-11">
+      <div class="flex flex-direction">
+
+        <app-board-user *ngIf=" isProfileOwner" [header]="'Editar descrição'" style="z-index: 3;">
+          <div activator>
+            <div *ngIf="isProfileOwner" class="filter-button" style="background-color: #0d99ff;">
+            </div>
+          </div>
+          <div class="flex align-items-center flex-column">
+            <form [formGroup]="form" *ngIf="isProfileOwner" class="flex w-12">
+              <p class="w-4 justify-content-center m-0">Insira a nova descrição:</p>
+              <input class="w-8 align-items-center"
+                style="color: white; background-color: #4E096F; border: solid; border-color: white;"
+                formControlName="imageDescription" type="text">
+            </form>
+            <div class="flex flex-direction mt-4">
+              <div class="filter-button" style="background-color: green;" (click)="editarClick(image.id)">Editar</div>
+              <div class="filter-button" style="background-color: black" (click)="voltarClick()">Voltar</div>
+            </div>
+          </div>
+        </app-board-user>
+
+        <app-board-user *ngIf="isProfileOwner" [header]="'Excluir foto'" style="z-index: 3;">
+          <div activator>
+            <div *ngIf="isProfileOwner" class="filter-button" style="background-color: red;">
+            </div>
+          </div>
+          <div class="flex align-items-center flex-column">
+            <div>
+              Tem certeza que deseja excluir a imagem?
+            </div>
+            <div class="flex flex-direction mt-4">
+              <div class="filter-button" style="background-color: red;" (click)="deleteClick(image.id)">Deletar</div>
+              <div class="filter-button" style="background-color: black" (click)="voltarClick()">Voltar</div>
+            </div>
+          </div>
+        </app-board-user>
+      </div>
     </div>
-    <div class="profile-bio">
+    <p>
       {{image.description}}
-    </div>
+    </p>
   </div>
-</div>
+</app-board-user>

@@ -1,0 +1,27 @@
+
+.buscar-button{
+  font-size: 2rem;
+  color: white;
+  /* background-color: #2C0A34; */
+  margin-top: 0;
+  border-radius: 9px;
+  padding: 5px;
+  min-width: 300px;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  cursor: pointer;
+  background-color: #2C0A34;
+}
+
+
+.buscar-button-on{
+  cursor: pointer;
+  background-color: #2C0A34;
+}
+
+.buscar-button-off{
+  cursor: default;
+  background-color: rgb(71, 71, 71);
+  color: rgb(119, 119, 119);
+
+}

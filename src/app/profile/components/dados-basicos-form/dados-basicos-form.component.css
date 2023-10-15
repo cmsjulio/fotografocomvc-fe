@@ -1,0 +1,22 @@
+.input-style{
+  background-color: #4E096F;
+  color: white;
+  border-color: white;
+  border-style: solid;
+}
+
+
+
+.filter-button{
+  z-index: 1;
+  /* background-color: #4E096F; */
+  /* background-color: black; */
+  border-radius: 6px;
+  padding: .7em .7em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0 .3em
+}
+

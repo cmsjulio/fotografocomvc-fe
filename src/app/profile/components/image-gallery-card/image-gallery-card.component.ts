@@ -1,3 +1,5 @@
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { Photographer } from './../../../models/photographer.model';
 import { Router } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ImageService } from './../../../service/image.service';
@@ -10,13 +12,19 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./image-gallery-card.component.css']
 })
 export class ImageGalleryCardComponent implements OnInit {
+  @Input() isProfileOwner: boolean;
   @Input() image: Image;
+  @Input() photographer: Photographer;
   public thumb: any;
+  public form: FormGroup;
 
-  constructor(private imageService: ImageService, private sanitizer: DomSanitizer,     private router: Router
+  constructor(public fb: FormBuilder, private imageService: ImageService, private sanitizer: DomSanitizer,     private router: Router
     ) { }
+    public isDisabled=true;
 
-  ngOnInit(): void {
+  ngOnInit(): void {this.form = this.fb.group({
+    imageDescription: [this.image.description]
+ })
     this.imageService.getImageById(this.image.id).subscribe((response) => {
       this.image = response;
       console.log(response);
@@ -27,5 +35,22 @@ export class ImageGalleryCardComponent implements OnInit {
     })
   }
 
+  public editarClick(imageId?: string): void {
+    var imageRequest = {
+      imageDescription: this.form.controls['imageDescription'].value
+   }
+   this.imageService.updateGalleryImageDescription(imageRequest, imageId).subscribe((response)=>{
+    window.location.reload()
+ })
+  }
 
+  public voltarClick(): void {
+    window.location.reload()
+  }
+
+  public deleteClick(imageId?: string): void{
+    this.imageService.deleteGalleryImage(imageId).subscribe((response)=>{
+      window.location.reload()
+   })
+  }
 }
