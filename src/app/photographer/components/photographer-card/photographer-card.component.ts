@@ -22,7 +22,7 @@ export class PhotographerCardComponent implements OnInit {
   ngOnInit(): void {
     this.imageService.getImageById(this.photographer.profilePicImageId).subscribe((response) => {
       this.image = response;
-      console.log(response);
+      // console.log(response);
 
       let objectURL = 'data:image/jpeg;base64,' + response.originalImage;
       this.thumb = this.sanitizer.bypassSecurityTrustUrl(objectURL);

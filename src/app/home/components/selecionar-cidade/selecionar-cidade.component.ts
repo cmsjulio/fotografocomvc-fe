@@ -25,13 +25,13 @@ export class SelecionarCidadeComponent implements OnInit {
   ngOnInit(): void {
         this.locationService.findAllLocation().subscribe((response) => {
           this.locationList = response;
-          console.log(response);
+          // console.log(response);
 
           let states = this.locationList.map((location) => {
             return location.locationState;
           });
           this.locationStateList = [...new Set(states)];
-          console.log(this.locationStateList);
+          // console.log(this.locationStateList);
         })
 
 
@@ -44,14 +44,14 @@ export class SelecionarCidadeComponent implements OnInit {
     });
     this.selectedCity = '-';
     this.isLocationSelected = false;
-    console.log(this.selectedState);
+    // console.log(this.selectedState);
   }
 
   public itemCityClick(location: Location): void {
     this.selectedCity = location.locationCity;
     this.selectedLocation = location;
     this.isLocationSelected = true;
-    console.log(this.selectedLocation);
+    // console.log(this.selectedLocation);
   }
 
   public submitLocationRequest(): void {

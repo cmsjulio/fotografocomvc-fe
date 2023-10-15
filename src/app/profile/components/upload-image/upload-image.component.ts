@@ -31,7 +31,7 @@ export class UploadImageComponent implements OnInit {
      this.http.post('http://localhost:8080/fotografocomvc-api/photographer/private/gallery', formData)
     .subscribe(
        (response) =>{
-        console.log(response)
+        // console.log(response)
         window.location.reload();
       },
        (error) =>{console.log(error)}

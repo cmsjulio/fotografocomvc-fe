@@ -31,7 +31,7 @@ export class DadosBasicosFormComponent implements OnInit {
     this.form.aboutMe = this.photographer.aboutMe
     this.form.locationId = this.photographer.location?.id.toString()
 
-    console.log(this.form)
+    // console.log(this.form)
   }
 
   public submitUpdate(): void{

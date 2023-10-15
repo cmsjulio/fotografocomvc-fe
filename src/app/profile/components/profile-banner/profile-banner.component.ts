@@ -26,7 +26,7 @@ export class ProfileBannerComponent implements OnInit {
       .getImageById(this.photographer.profilePicImageId)
       .subscribe((response) => {
         this.profilePic = response;
-        console.log(this.profilePic);
+        // console.log(this.profilePic);
 
         let objectURL = 'data:image/jpeg;base64,' + response.originalImage;
         this.thumb = this.sanitizer.bypassSecurityTrustUrl(objectURL);

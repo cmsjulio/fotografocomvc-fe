@@ -27,7 +27,7 @@ export class ImageGalleryCardComponent implements OnInit {
  })
     this.imageService.getImageById(this.image.id).subscribe((response) => {
       this.image = response;
-      console.log(response);
+      // console.log(response);
 
       let objectURL = 'data:image/jpeg;base64,' + response.originalImage;
       this.thumb = this.sanitizer.bypassSecurityTrustUrl(objectURL);
